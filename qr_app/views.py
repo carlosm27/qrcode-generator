@@ -1,10 +1,13 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.core.files.base import ContentFile
+
 import qrcode
 import qrcode.image.svg
 from .models import QrInfo
 from io import BytesIO
-from django.core.files.base import ContentFile
 
+@login_required()
 def qr_page(request):
     context = {}
     qr = {}
