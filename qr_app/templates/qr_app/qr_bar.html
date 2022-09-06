@@ -1,0 +1,55 @@
+{% include 'users/base.html' %}
+
+{% block content %}
+
+<body>
+  	<div class= "qr_generator">
+	    <h1> Generate your QR Code</h1>
+      {% if user.is_authenticated %}
+      <div class="card-body">
+        <form method= "POST" action ="">
+             {% csrf_token %}
+            <h3>Enter any text to generate a QR code</h3>
+              <div class="input-group mb-3">
+                <span class="input-group-text"
+                      id="inputGroup-sizing-default">QR Code Text:</span>
+                <input type="text"
+                       class="form-control"
+                       aria-describedby="inputGroup-sizing-default"
+                       name="qr_text"
+                       autofocus>
+              </div>
+              <div class="input-group mb-3">
+                <input type="submit" style="max-width: 200px; margin: auto" class="form-control">
+              </div>
+        </form>
+      </div>
+      {% endif %}
+  	</div>
+
+    <div class = "qrcode_image">
+        <div> {{ svg | safe }}</div>
+
+    </div>
+
+
+  </body>
+
+<style>
+
+ .qr_generator {
+
+  color: #F0FFFF;
+  text-align: center;
+  font-family: sans-serif;
+ }
+
+ .qrcode_image {
+
+  text-align: center;
+
+ }
+
+</style>
+
+{% endblock %}
