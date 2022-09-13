@@ -1,6 +1,11 @@
 {% extends 'users/registration/form_base.html' %}
 
 {% block content %}
+<head>
+    <title>Login</title>
+
+</head>
+
   <div class="header-bar">
     <h1>Login</h1>
 </div>
@@ -9,9 +14,11 @@
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <input class="button" type="submit" value="Login">
-    </form>
+    <input type="submit" class="button" id="formGroupExampleInput" value="Login">
+</form>
     <p> Don't have an account?<a href="{% url 'signup' %}">Register</a></p>
 </div>
+
+
 
 {% endblock %}
