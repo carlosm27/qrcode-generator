@@ -42,3 +42,4 @@ The QR Generator will ask the user to enter a text, press submit to convert the 
 
 ![image](https://user-images.githubusercontent.com/70811425/192155673-0b224ca5-cc26-4c9c-8a6f-6b240f29c322.png)
 
+This project the file system, every time a QR code is generated, it will create .png file in the `media` folder.
