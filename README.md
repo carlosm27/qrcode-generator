@@ -1,5 +1,7 @@
 # qrcode_generator
 
+This is a project in Python using Django Framework to generate QR codes.
+
 To install the project in your local machine:
 
 1. Clone this repository
@@ -13,8 +15,7 @@ To install the project in your local machine:
 5. Then, in your browser go to `http://localhost:8000/home`
 
 
-A Project in Python using Django with authentication system to generate QR codes.
-
+---
 There are two apps in this project, one is the `users` app and the `qr_app`.
 
 The `users` app is the one it manages the user authentication.
