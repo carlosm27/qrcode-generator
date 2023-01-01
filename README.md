@@ -1,4 +1,4 @@
-# qrcode_generator
+# qrcode-generator
 
 This is a project in Python using Django Framework to generate QR codes.
 
